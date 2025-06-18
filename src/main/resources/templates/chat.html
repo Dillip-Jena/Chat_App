@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.1/stomp.min.js"></script>
+  <link rel="stylesheet" th:href="@{/style/style.css}">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center">Real-time Chat Application</h2>
+
+    <div id="chat" class="border rounded p-3 mb-3">
+
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" id="senderInput" class="form-control" placeholder="Input name ...">
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" id="messageInput" class="form-control" placeholder="Type message ...">
+      <div id="input-group-append">
+        <button id="sendMessage" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+  <script th:src="@{/script/script.js}"></script>
+</body>
+</html>
